@@ -1,10 +1,10 @@
 require 'telegram/bot'
-token = 'YOUR_TELEGRAM_BOT_API_TOKEN'
+token = '234485259:AAGTvYouOtX1KQFUC54ob6kW6NKzCsQE8a4'
 Telegram::Bot::Client.run(token) do |bot|
   bot.listen do |message|
     case message.text
     when '/start'
-      bot.api.sendMessage(chat_id: message.chat.id, text: "Hello, #{message.from.first_name}")
+      bot.api.sendMessage(chat_id: message.chat.id, text: "Привет, #{message.from.first_name}")
     end
   end
 end
